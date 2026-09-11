@@ -18,9 +18,8 @@ document.getElementById('enterSystem').addEventListener('click', function() {
         if (attemptsLeft > 0) {
             message.textContent = `Access denied. Wrong attempts: ${failedAttempts}. You have ${attemptsLeft} attempts left.`;
         } else {
+            document.getElementById('enterSystem').disabled = true
             message.textContent = 'Machine blocked. Too many wrong attempts made.';
-            button.disabled = true;
-            
         }
 
         imageName = 'locked.jpg';
